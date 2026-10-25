@@ -481,16 +481,13 @@ document.addEventListener("submit", async (event) => {
   event.preventDefault();
   try {
     if (form.id === "authForm") {
+      event.preventDefault();
+      const authpage = document.getElementById("authpage");
+      const dashboard = document.getElementById("dashboard");
+      if (authpage) authpage.classList.add("hidden");
+      if (dashboard) dashboard.classList.remove("hidden");
       $("#authError").textContent = "";
       $("#authpage").classList.add("hidden");
-    } else if (form.id === "studentForm") {
-      await submitStudentForm(form);
-    } else if (form.id === "gradeForm") {
-      await submitGradeForm(form);
-    } else if (form.id === "attendanceForm") {
-      await submitAttendanceForm(form);
-    } else if (form.id === "passwordForm") {
-      await submitPasswordForm(form);
     }
   } catch (error) {
     if (form.id === "authForm") $("#authError").textContent = error.message;
