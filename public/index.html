@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>Midnimo Academy | Portal-ka Dugsiga</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main id="authPage" class="auth-page">
+    <section class="auth-art">
+      <a class="brand brand-light" href="#"><img class="brand-logo" src="/school-logo.png" alt="Midnimo Academy For Science &amp; Technology"><span>Midnimo</span></a>
+      <div class="art-copy"><p class="eyebrow">Waxbarasho · Horumar · Midnimo</p><h1>Mustaqbalkaaga waxbarasho, hal meel ku maamul.</h1><p>Ardaydu waxay si ammaan ah ula socdaan natiijooyinkooda iyo xaadiriskooda. Maamulka ayaa xogta ardayda iyo diiwaannada maamula.</p></div>
+      <div class="school-name-light">Midnimo Academy For Science &amp; Technology</div>
+    </section>
+    <section class="auth-content">
+      <div class="auth-card">
+        <a class="brand mobile-brand" href="#"><img class="brand-logo" src="/school-logo.png" alt="Midnimo Academy For Science &amp; Technology"><span>Midnimo</span></a>
+        <p class="eyebrow">Portal-ka dugsiga</p>
+        <h2 id="authTitle">Ku soo dhawoow</h2>
+        <p id="authDescription" class="muted">Geli username-kaaga iyo erayga sirta ah.</p>
+        <form id="authForm">
+          <label class="field"><span>Username</span><input name="username" autocomplete="username" required maxlength="60" placeholder="Geli username-ka"></label>
+          <label id="confirmField" class="field hidden"><span>Xaqiiji erayga sirta ah</span><input name="confirmPassword" type="password" autocomplete="new-password" minlength="10" placeholder="Ku celi erayga sirta ah"></label>
+          <label class="field"><span>Erayga sirta ah</span><input name="password" type="password" autocomplete="current-password" required minlength="8" placeholder="Geli erayga sirta ah"></label>
+          <button id="authSubmit" class="button button-primary button-full" type="submit">Gal</button>
+          <p id="authError" class="error" role="alert" aria-live="polite"></p>
+        </form>
+        <p id="setupHint" class="hint hidden">Marka ugu horraysa samee username iyo eray sir ah oo ammaan ah. Akoonkan ayaa noqonaya maamulka ugu sarreeya.</p>
+        <p class="school-name-dark">Midnimo Academy For Science &amp; Technology</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="dashboard" class="dashboard hidden">
+    <aside id="sidebar" class="sidebar">
+      <a class="brand brand-light side-brand" href="#"><img class="brand-logo" src="/school-logo.png" alt="Midnimo Academy For Science &amp; Technology"><span>Midnimo</span></a>
+      <p class="side-caption">MAAMULKA DUGSIGA</p>
+      <nav id="adminNav" class="side-nav hidden" aria-label="Maamulka">
+        <button class="nav-item active" data-page="overview"><span>▦</span> Guudmar</button>
+        <button class="nav-item" data-page="students"><span>♙</span> Ardayda</button>
+        <button class="nav-item" data-page="records"><span>▤</span> Natiijo &amp; xaadiris</button>
+        <button class="nav-item" data-page="settings"><span>⚙</span> Dejinta</button>
+      </nav>
+      <nav id="studentNav" class="side-nav hidden" aria-label="Ardayga">
+        <button class="nav-item active" data-page="studentHome"><span>▦</span> Guudmar</button>
+        <button class="nav-item" data-page="studentGrades"><span>▤</span> Natiijooyinkayga</button>
+        <button class="nav-item" data-page="studentAttendance"><span>✓</span> Xaadiriskayga</button>
+      </nav>
+      <div class="sidebar-bottom"><span class="status-dot"></span> Nidaamku waa diyaar</div>
+    </aside>
+    <div class="main-area">
+      <header class="topbar">
+        <button id="menuButton" class="icon-button menu-button" type="button" aria-label="Fur menu">☰</button>
+        <div class="topbar-school">Midnimo Academy For Science &amp; Technology</div>
+        <div class="topbar-user"><span id="topAvatar" class="avatar">M</span><span><strong id="topUsername">Maamul</strong><small id="topRole">Maamul</small></span><button id="logoutButton" class="button button-quiet" type="button">Ka bax</button></div>
+      </header>
+      <main id="mainContent" class="content"></main>
+    </div>
+  </div>
+
+  <div id="modalRoot"></div>
+  <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+</body>
+</html>
