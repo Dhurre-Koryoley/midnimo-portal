@@ -482,7 +482,7 @@ document.addEventListener("submit", async (event) => {
   try {
     if (form.id === "authForm") {
       $("#authError").textContent = "";
-      await submitAuth(form);
+      $("#authpage").classList.add("hidden");
     } else if (form.id === "studentForm") {
       await submitStudentForm(form);
     } else if (form.id === "gradeForm") {
